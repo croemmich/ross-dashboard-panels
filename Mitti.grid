@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><abs contexttype="opengear" gridsize="20" id="topLevel" keepalive="true" name="mittiControl" style="bg#selectedmuted;">
+   <meta>
+      <params>
+         <param access="1" maxlength="0" name="Mitti_Host" oid="Mitti.Host" stateless="true" type="STRING" value="localhost" widget="default"/>
+         <param access="1" constraint="1.0;65535.0;1.0;65535.0;1" constrainttype="INT_STEP_RANGE" name="Mitti_Port" oid="Mitti.Port" precision="0" stateless="true" type="INT32" value="51000" widget="default"/>
+      </params>
+   </meta>
+   <tab height="340" left="40" top="60" width="860">
+      <abs name="Control">
+         <simplegrid height="120" left="20" right="20" top="20">
+            <button buttontype="push" gpi="panic" height="80" left="20" name="Panic" style="bg#red;size:Big;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/panic");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/panic" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;1ca009f74963472c83475b7a604f3461&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="play" height="80" left="120" name="Play" style="size:Big;bg#green;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/playSelectedCue");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/playSelectedCue" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;924b5588ff4a066675ffe9d41ad8b939&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="pause" height="80" left="220" name="Pause" style="size:Big;bg#yellow;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/pause");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/pause" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;9d752d36a43407106eeada75b5bc548c&lt;/checksum&gt;!!*/</task>
+            </button>
+         </simplegrid>
+         <simplegrid height="60" left="160" right="160" top="160">
+            <button buttontype="push" gpi="rewind" height="80" left="20" name="Rewind" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/rewind");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/rewind" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;a764d1728427a051a382d75d39d34332&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="goto10" height="80" left="20" name="GOTO 10" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/goto10");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/goto10" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;6de41c094f56be372d751908e61a9706&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="goto20" height="80" left="120" name="GOTO 20" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/goto20");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/goto20" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;6e86e9cce37a9c23134e473ce521c2fb&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="goto30" height="80" left="220" name="GOGO 30" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/goto30");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/goto30" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;c9c3068463693c9bf962da0d22261c45&lt;/checksum&gt;!!*/</task>
+            </button>
+         </simplegrid>
+         <simplegrid height="40" left="20" right="20" top="240">
+            <button buttontype="push" gpi="selectPrevious" height="80" left="20" name="Select Previous" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/selectPrevCue");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/selectPrevCue" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;c99485a09983bd9c9dd55f546913dc4a&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="selectCurrent" height="80" left="120" name="Select Current" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/selectCurrentCue");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/selectCurrentCue" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;f3ed910e5639af12ff5c863b061767c6&lt;/checksum&gt;!!*/</task>
+            </button>
+            <button buttontype="push" gpi="selectNext" height="80" left="220" name="Select Next" style="look:normal;" top="40" width="80">
+               <task tasktype="ogscript">/*! block id=1000,1001,1002 !*/
+ogscript.sendUDPString(params.getValue('Mitti.Host', 0), params.getValue('Mitti.Port', 0), "/mitti/selectNextCue");
+/*!!
+ &lt;block id="1000" type="ogscript_sendudpasstring" x="283" y="10" w="318" HOST="ID:1001" PORT="ID:1002" STRING="/mitti/selectNextCue" /&gt;
+&lt;block id="1001" type="param_topLevel&amp;amp;Mitti_Host (Mitti.Host)[0]" x="10" y="10" w="243" SET="" /&gt;
+&lt;block id="1002" type="param_topLevel&amp;amp;Mitti_Port (Mitti.Port)[0]" x="10" y="72" w="243" SET="" /&gt;
+!!*/
+/*!!&lt;checksum&gt;0ff38112d965ed0f91e5cd0d7e674f4b&lt;/checksum&gt;!!*/</task>
+            </button>
+         </simplegrid>
+      </abs>
+      <abs name="Setup">
+         <label height="40" left="20" name="IP/Hostname:" style="txt-align:east;size:Big;" top="60" width="140"/>
+         <param expand="true" height="40" left="180" oid="Mitti.Host" style="size:Big;" top="60" widget="text" width="300"/>
+         <label height="40" left="20" name="Port:" style="txt-align:east;size:Big;" top="120" width="140"/>
+         <param editable="false" expand="true" height="40" left="180" oid="Mitti.Port" style="size:Big;" top="120" widget="spinner" width="140"/>
+         <label height="40" left="20" name="Note: UDP Controls must be enabled in Mitti" style="txt-align:center;size:Big;" top="240" width="820"/>
+      </abs>
+   </tab>
+   <label height="40" left="40" name="Mitti Controller" style="txt-align:center;size:Bigger;font:bold;" top="20" width="860"/>
+</abs>
