@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><abs contexttype="opengear" gridsize="20" id="topLevel" keepalive="true" name="mittiControl" style="bg#selectedmuted;">
    <meta>
       <params>
-         <param access="1" maxlength="0" name="Mitti_Host" oid="Mitti.Host" stateless="true" type="STRING" value="localhost" widget="default"/>
-         <param access="1" constraint="1.0;65535.0;1.0;65535.0;1" constrainttype="INT_STEP_RANGE" name="Mitti_Port" oid="Mitti.Port" precision="0" stateless="true" type="INT32" value="51000" widget="default"/>
+         <param access="1" maxlength="0" name="Mitti_Host" oid="Mitti.Host" type="STRING" value="localhost" widget="default"/>
+         <param access="1" constraint="1.0;65535.0;1.0;65535.0;1" constrainttype="INT_STEP_RANGE" name="Mitti_Port" oid="Mitti.Port" precision="0" stateless="false" type="INT32" value="51000" widget="default"/>
       </params>
    </meta>
    <tab height="340" left="40" top="60" width="860">
